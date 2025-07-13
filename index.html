@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🌤️ Weather App</h1>
+    <p class="subtitle">Live Weather & Forecast</p>
+
+    <label class="toggle-switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider"></span>
+    </label>
+
+    <div class="input-group">
+      <input type="text" id="cityInput" placeholder="Enter city name...">
+      <button onclick="getWeather()">Get Weather</button>
+      <button onclick="getWeatherByLocation()">Use Current Location</button>
+    </div>
+
+    <div id="weatherResult"></div>
+
+    <h3>📅 5-Day Forecast</h3>
+    <div id="forecastResult" class="forecast-grid"></div>
+
+    <h3>📍 Location Map</h3>
+    <div id="map" style="height: 250px; border-radius: 12px; margin-top: 10px;"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
